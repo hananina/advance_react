@@ -6,6 +6,7 @@ export default function formatMoney(amount = 0) {
   };
 
   // check if its a clean dollar amount
+  // あまりがない場合、例）100セント= 1ドルなので、その時は1.00と表示せず、.00をトル
   if (amount % 100 === 0) {
     options.minimumFractionDigits = 0;
   }
